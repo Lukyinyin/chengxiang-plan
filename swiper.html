@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="swiper-4.4.1.min.css">
+    <style>
+        .swiper-container {
+            width: 312px;
+            height: 245px;
+            background: #000;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 12px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: top;
+            -ms-flex-pack: top;
+            -webkit-justify-content: top;
+            justify-content: top;
+            -webkit-box-align: top;
+            -ms-flex-align: top;
+            -webkit-align-items: top;
+            align-items: top;
+        }
+        .swiper-slide img{
+            display: block;
+            width: 310px;
+            height: 200px;
+            border: 1px solid #ececec;
+        }
+        .swiper-slide p{
+            width: 100%;
+            position: absolute;
+            left:0;
+            bottom:-3px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 14px;
+        }
+        .swiper-pagination{
+            text-align: right;
+        }
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color:#000;
+            opacity: 1;
+            background: rgba(0,0,0,0.2);
+        }
+        .swiper-pagination-bullet-active {
+            color:#fff;
+            background: #007aff;
+        }
+        .swiper-pagination-bullet{
+            height: 14px;
+            line-height: 14px;
+            border-radius: 0;
+            color: #ffffff;
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+            margin:0 2px;
+
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets{
+            bottom:25px;
+            right:0;
+        }
+        .swiper-pagination-bullet-active{
+            background: #ce0307;
+        }
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>图片新闻图片新闻图片新闻</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>教育部最新最新消息</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>重点调控楼市在政策</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>一带一路新闻图片新闻</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>民生闻图片新闻图片新闻</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>国庆最新新闻公路部门消息</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>图片新闻图片新闻美好新闻</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/silide-img_13.png" alt="">
+            <p>旺旺新闻图片新闻旺旺新闻</p>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="swiper-4.4.1.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+         autoplay:{
+             disableOnInteraction: false,
+         },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+    });
+</script>
+</body>
+</html>
